@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+        font-family: lexend deca !important;
+    }
+    .navigation {
+        background-color: hsl(0, 0%, 90%);
+        width: calc(100% - 28px);
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        padding: 6px;
+        margin-top: 9px;
+        margin-left: 8px;
+        margin-right: 8px;
+        border-radius: 19px;
+    }
+    .tab {
+        display: inline-block;
+        color: royalblue;
+        padding: 8px 15px;
+        font-size: 22px;
+        cursor: pointer;
+        border-radius: 11px;
+        margin: 5px;
+        transition: 0.4s all;
+        z-index: 99;
+    }
+    #selection {
+        z-index: -8;
+        position: absolute;
+        color: royalblue;
+        background-color: royalblue;
+        font-size: 22px;
+        cursor: pointer;
+        border-radius: 11px;
+        transition: 0.4s all;
+        left: 11px;
+        top: 11px;
+        bottom: 11px;
+        width: 80px;
+    }
+    .page {
+        position: fixed;
+        width: 100%;
+        transition: 0.4s all;
+        padding: 11px;
+        box-sizing: border-box;
+    }
+    .title {
+        padding-top: 90px;
+        font-size: 50px;
+        font-weight: 600;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+    .title {
+        padding-top: 90px;
+        font-size: 50px;
+        font-weight: 600;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+    #homepage {
+        left: 0;
+    }
+    #servicespage {
+        left: 100vw;
+    }
+    #reviewspage {
+        left: 200vw;
+    }
+    #locationspage {
+        left: 300vw;
+    }
+    #contactpage {
+        left: 400vw;
+    }
+    #appointmentspage {
+        left: 500vw;
+    }
+</style>
+
+<script>
+function starter() {
+    var a = document.getElementById("home").offsetWidth;
+    document.getElementById('selection').style.left = "11px";
+    document.getElementById('selection').style.width = (a) + "px";
+    document.getElementById('home').style.color = "white";
+    document.getElementById('services').style.color = "royalblue";
+    document.getElementById('reviews').style.color = "royalblue";
+    document.getElementById('location').style.color = "royalblue";
+    document.getElementById('contact').style.color = "royalblue";
+    document.getElementById('appointments').style.color = "royalblue";
+    var w = document.getElementById("navigation").offsetTop + document.getElementById("navigation").offsetHeight + document.getElementById("navigation").offsetTop +"px";
+    document.getElementById('homepage').style.top = w;
+    document.getElementById('servicespage').style.top = w;
+    document.getElementById('reviewspage').style.top = w;
+    document.getElementById('locationspage').style.top = w;
+    document.getElementById('contactpage').style.top = w;
+    document.getElementById('appointmentspage').style.top = w;
+}
+function home() {
+    var a = document.getElementById("home").offsetWidth;
+    document.getElementById('selection').style.left = "11px";
+    document.getElementById('selection').style.width = (a) + "px";
+    document.getElementById('home').style.color = "white";
+    document.getElementById('services').style.color = "royalblue";
+    document.getElementById('reviews').style.color = "royalblue";
+    document.getElementById('location').style.color = "royalblue";
+    document.getElementById('contact').style.color = "royalblue";
+    document.getElementById('appointments').style.color = "royalblue";
+
+    document.getElementById('homepage').style.left = "0";
+    document.getElementById('servicespage').style.left = "100vw";
+    document.getElementById('reviewspage').style.left = "200vw";
+    document.getElementById('locationspage').style.left = "300vw";
+    document.getElementById('contactpage').style.left = "400vw";
+    document.getElementById('appointmentspage').style.left = "500vw";
+}
+function services() {
+    var a = document.getElementById("services").offsetWidth;
+    document.getElementById('selection').style.left = document.getElementById("services").offsetLeft + "px";
+    document.getElementById('selection').style.width = (a) + "px";
+    document.getElementById('home').style.color = "royalblue";
+    document.getElementById('services').style.color = "white";
+    document.getElementById('reviews').style.color = "royalblue";
+    document.getElementById('location').style.color = "royalblue";
+    document.getElementById('contact').style.color = "royalblue";
+    document.getElementById('appointments').style.color = "royalblue";
+
+    document.getElementById('homepage').style.left = "-100vw";
+    document.getElementById('servicespage').style.left = "0";
+    document.getElementById('reviewspage').style.left = "100vw";
+    document.getElementById('locationspage').style.left = "200vw";
+    document.getElementById('contactpage').style.left = "300vw";
+    document.getElementById('appointmentspage').style.left = "400vw";
+}
+function reviews() {
+    var a = document.getElementById("reviews").offsetWidth;
+    document.getElementById('selection').style.left = document.getElementById("reviews").offsetLeft + "px";
+    document.getElementById('selection').style.width = (a) + "px";
+    document.getElementById('home').style.color = "royalblue";
+    document.getElementById('services').style.color = "royalblue";
+    document.getElementById('reviews').style.color = "white";
+    document.getElementById('location').style.color = "royalblue";
+    document.getElementById('contact').style.color = "royalblue";
+    document.getElementById('appointments').style.color = "royalblue";
+
+    document.getElementById('homepage').style.left = "-200vw";
+    document.getElementById('servicespage').style.left = "-100vw";
+    document.getElementById('reviewspage').style.left = "0";
+    document.getElementById('locationspage').style.left = "100vw";
+    document.getElementById('contactpage').style.left = "200vw";
+    document.getElementById('appointmentspage').style.left = "300vw";
+}
+function locations() {
+    var a = document.getElementById("location").offsetWidth;
+    document.getElementById('selection').style.left = document.getElementById("location").offsetLeft + "px";
+    document.getElementById('selection').style.width = (a) + "px";
+    document.getElementById('home').style.color = "royalblue";
+    document.getElementById('services').style.color = "royalblue";
+    document.getElementById('reviews').style.color = "royalblue";
+    document.getElementById('location').style.color = "white";
+    document.getElementById('contact').style.color = "royalblue";
+    document.getElementById('appointments').style.color = "royalblue";
+
+    document.getElementById('homepage').style.left = "-300vw";
+    document.getElementById('servicespage').style.left = "-200vw";
+    document.getElementById('reviewspage').style.left = "-100vw";
+    document.getElementById('locationspage').style.left = "0";
+    document.getElementById('contactpage').style.left = "100vw";
+    document.getElementById('appointmentspage').style.left = "200vw";
+}
+function contact() {
+    var a = document.getElementById("contact").offsetWidth;
+    document.getElementById('selection').style.left = document.getElementById("contact").offsetLeft + "px";
+    document.getElementById('selection').style.width = (a) + "px";
+    document.getElementById('home').style.color = "royalblue";
+    document.getElementById('services').style.color = "royalblue";
+    document.getElementById('reviews').style.color = "royalblue";
+    document.getElementById('location').style.color = "royalblue";
+    document.getElementById('contact').style.color = "white";
+    document.getElementById('appointments').style.color = "royalblue";
+
+    document.getElementById('homepage').style.left = "-400vw";
+    document.getElementById('servicespage').style.left = "-300vw";
+    document.getElementById('reviewspage').style.left = "-200vw";
+    document.getElementById('locationspage').style.left = "-100vw";
+    document.getElementById('contactpage').style.left = "0";
+    document.getElementById('appointmentspage').style.left = "100vw";
+}
+function appointments() {
+    var a = document.getElementById("appointments").offsetWidth;
+    document.getElementById('selection').style.left = document.getElementById("appointments").offsetLeft + "px";
+    document.getElementById('selection').style.width = (a) + "px";
+    document.getElementById('home').style.color = "royalblue";
+    document.getElementById('services').style.color = "royalblue";
+    document.getElementById('reviews').style.color = "royalblue";
+    document.getElementById('location').style.color = "royalblue";
+    document.getElementById('contact').style.color = "royalblue";
+    document.getElementById('appointments').style.color = "white";
+
+    document.getElementById('homepage').style.left = "-500vw";
+    document.getElementById('servicespage').style.left = "-400vw";
+    document.getElementById('reviewspage').style.left = "-300vw";
+    document.getElementById('locationspage').style.left = "-200vw";
+    document.getElementById('contactpage').style.left = "-100vw";
+    document.getElementById('appointmentspage').style.left = "0";
+}
+</script>
+
+<body onload="starter()" >
+
+
+    <div id="navigation"  class="navigation">
+        <div id="selection" ></div>
+        <div onclick="home()" id="home" class="tab">Home</div>
+        <div onclick="services()" id="services" class="tab">Services</div>
+        <div onclick="reviews()" id="reviews" class="tab">Reviews</div>
+        <div onclick="locations()" id="location" class="tab">Location</div>
+        <div onclick="contact()" id="contact" class="tab">Contact</div>
+        <div onclick="appointments()" id="appointments" class="tab">Appointments</div>
+    </div>
+    <div class="page" id="homepage" >
+        <div class="title" >
+            Home
+        </div>
+    </div>
+    <div class="page" id="servicespage" >
+        <div class="title" >
+            Services
+        </div>
+    </div>
+    <div class="page" id="reviewspage" >
+        <div class="title" >
+            Reviews
+        </div>
+    </div>
+    <div class="page" id="locationspage" >
+        <div class="title" >
+            Location
+        </div>
+    </div>
+    <div class="page" id="contactpage" >
+        <div class="title" >
+            Contact
+        </div>
+    </div>
+    <div class="page" id="appointmentspage" >
+        <div class="title" >
+            Appointments
+        </div>
+    </div>
+</body>
+
+</html>

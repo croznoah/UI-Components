@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+</head>
+<style>
+    body {
+        overflow: hidden;
+        font-family: lexend deca !important;
+    }
+    #button1 {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        color: white;
+        background-color: royalblue;
+        cursor: pointer;
+        position: fixed;
+        transition: 0.4s all;
+        border-radius: 25px;
+        box-sizing: border-box;
+        margin: 0px;
+        top: 8px;
+        left: 8px;
+    }
+    #buttonicon1 {
+        font-size: 29px;
+        position: absolute;
+        vertical-align: top;
+        opacity: 1;
+        transition: 0.4s all;
+        padding: 10px;
+        pointer-events: auto;
+        z-index: 99;
+    }
+    #backicon1 {
+        font-size: 29px;
+        position: absolute;
+        vertical-align: top;
+        opacity: 0;
+        transition: 0.4s all;
+        padding: 10px;
+        pointer-events: none;
+        z-index: 99;
+    }
+    #button2 {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        color: white;
+        background-color: orange;
+        cursor: pointer;
+        position: fixed;
+        transition: 0.4s all;
+        border-radius: 25px;
+        box-sizing: border-box;
+        margin: 0px;
+        right: 8px;
+        top: 8px;
+    }
+    #buttonicon2 {
+        font-size: 29px;
+        position: absolute;
+        vertical-align: top;
+        opacity: 1;
+        transition: 0.4s all;
+        padding: 10px;
+        pointer-events: auto;
+        z-index: 99;
+    }
+    #backicon2 {
+        font-size: 29px;
+        position: absolute;
+        vertical-align: top;
+        opacity: 0;
+        transition: 0.4s all;
+        padding: 10px;
+        pointer-events: none;
+        z-index: 99;
+    }
+    #navbar {
+        background-color: hsl(0, 0%, 90%);
+        position: relative;
+        left: 0px;
+        top: 0px;
+        margin: -8px;
+        margin-bottom: 8px;
+        height: 68px;
+    }
+    #expandcontent1 {
+        position: relative;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s all;
+        padding: 10px;
+        font-size: 18px;
+        padding-top: 60px;
+    }
+    #expandcontent2 {
+        position: relative;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s all;
+        padding: 10px;
+        font-size: 18px;
+        padding-top: 60px;
+    }
+</style>
+
+<script>
+function expand1() {
+    document.getElementById('button2').style.opacity = "0";
+    document.getElementById('button1').style.height = "100vh";
+    document.getElementById('button1').style.width = "100%";
+    document.getElementById('button1').style.top = "0px";
+    document.getElementById('button1').style.left = "0px";
+    document.getElementById('button1').style.borderRadius = "0px";
+    document.getElementById('buttonicon1').style.opacity = "0";
+    document.getElementById('buttonicon1').style.pointerEvents = "none";
+    document.getElementById('backicon1').style.opacity = "1";
+    document.getElementById('backicon1').style.pointerEvents = "auto";
+    document.getElementById('expandcontent1').style.opacity = "1";
+    document.getElementById('expandcontent1').style.pointerEvents = "auto";
+}
+function closeview1() {
+    document.getElementById('button2').style.opacity = "1";
+    document.getElementById('button1').style.height = "50px";
+    document.getElementById('button1').style.width = "50px";
+    document.getElementById('button1').style.top = "8px";
+    document.getElementById('button1').style.left = "8px";
+    document.getElementById('button1').style.borderRadius = "25px";
+    document.getElementById('buttonicon1').style.opacity = "1";
+    document.getElementById('buttonicon1').style.pointerEvents = "auto";
+    document.getElementById('backicon1').style.opacity = "0";
+    document.getElementById('backicon1').style.pointerEvents = "none";
+    document.getElementById('expandcontent1').style.opacity = "0";
+    document.getElementById('expandcontent1').style.pointerEvents = "none";
+}
+function expand2() {
+    document.getElementById('button1').style.opacity = "0";
+    document.getElementById('button2').style.height = "100vh";
+    document.getElementById('button2').style.width = "100%";
+    document.getElementById('button2').style.top = "0px";
+    document.getElementById('button2').style.right = "0px";
+    document.getElementById('button2').style.borderRadius = "0px";
+    document.getElementById('buttonicon2').style.opacity = "0";
+    document.getElementById('buttonicon2').style.pointerEvents = "none";
+    document.getElementById('backicon2').style.opacity = "1";
+    document.getElementById('backicon2').style.pointerEvents = "auto";
+    document.getElementById('expandcontent2').style.opacity = "1";
+    document.getElementById('expandcontent2').style.pointerEvents = "auto";
+}
+function closeview2() {
+    document.getElementById('button1').style.opacity = "1";
+    document.getElementById('button2').style.height = "50px";
+    document.getElementById('button2').style.width = "50px";
+    document.getElementById('button2').style.top = "8px";
+    document.getElementById('button2').style.right = "8px";
+    document.getElementById('button2').style.borderRadius = "25px";
+    document.getElementById('buttonicon2').style.opacity = "1";
+    document.getElementById('buttonicon2').style.pointerEvents = "auto";
+    document.getElementById('backicon2').style.opacity = "0";
+    document.getElementById('backicon2').style.pointerEvents = "none";
+    document.getElementById('expandcontent2').style.opacity = "0";
+    document.getElementById('expandcontent2').style.pointerEvents = "none";
+}
+</script>
+
+<body>
+    <div id="navbar">
+        <div id="button1" >
+            <div id="icon1div" >
+                <span onclick="expand1()" id="buttonicon1" class="material-icons-round">
+                    question_answer
+                </span>
+                <span onclick="closeview1()" id="backicon1" class="material-icons-round">
+                    arrow_back
+                </span>
+            </div>
+            <div id="expandcontent1">
+                Content In Here
+            </div>
+        </div>
+
+        <div id="button2" >
+            <div id="icon2div" >
+                <span onclick="expand2()" id="buttonicon2" class="material-icons-round">
+                    settings
+                </span>
+                <span onclick="closeview2()" id="backicon2" class="material-icons-round">
+                    arrow_back
+                </span>
+            </div>
+            <div id="expandcontent2">
+                Content In Here
+            </div>
+        </div>
+    </div>
+
+    Content
+
+
+
+</body>
+
+</html>
